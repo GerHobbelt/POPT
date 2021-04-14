@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popt-1.14\n"
 "Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
-"POT-Creation-Date: 2020-06-23 13:29+0300\n"
+"POT-Creation-Date: 2020-05-13 11:40+0300\n"
 "PO-Revision-Date: 2009-04-12 16:34+0300\n"
 "Last-Translator: Rihards Prieditis <RPrieditis@inbox.lv>\n"
 "Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
@@ -20,56 +20,56 @@ msgstr ""
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: src/popt.c:46
+#: src/popt.c:37
 msgid "unknown errno"
 msgstr "nezināms kļūdas numurs"
 
-#: src/popt.c:1206
+#: src/popt.c:1196
 #, c-format
 msgid "option type (%u) not implemented in popt\n"
 msgstr "iespējas tips (%u) nav ieviests popt\n"
 
-#: src/popt.c:1625
+#: src/popt.c:1607
 msgid "missing argument"
 msgstr "trūkst arguments"
 
-#: src/popt.c:1627
+#: src/popt.c:1609
 msgid "unknown option"
 msgstr "nezināma iespēja"
 
-#: src/popt.c:1629
+#: src/popt.c:1611
 msgid "mutually exclusive logical operations requested"
 msgstr "pieprasītas savstarpējie izslēdzošas loģiskās operācijas"
 
-#: src/popt.c:1631
+#: src/popt.c:1613
 msgid "opt->arg should not be NULL"
 msgstr "opcija->arguments nevar būt NULL"
 
-#: src/popt.c:1633
+#: src/popt.c:1615
 msgid "aliases nested too deeply"
 msgstr "aizstājvārdi iegulti pārāk dziļi"
 
-#: src/popt.c:1635
+#: src/popt.c:1617
 msgid "error in parameter quoting"
 msgstr "kļuda parametru citēšanā"
 
-#: src/popt.c:1637
+#: src/popt.c:1619
 msgid "invalid numeric value"
 msgstr "nederīga skaitļa vērtība"
 
-#: src/popt.c:1639
+#: src/popt.c:1621
 msgid "number too large or too small"
 msgstr "skaitlis pārāk liels, vai pārāk mazs"
 
-#: src/popt.c:1641
+#: src/popt.c:1623
 msgid "memory allocation failed"
 msgstr "atmiņas iedalīšana neizdevās"
 
-#: src/popt.c:1643
+#: src/popt.c:1625
 msgid "config file failed sanity test"
 msgstr ""
 
-#: src/popt.c:1647
+#: src/popt.c:1629
 msgid "unknown error"
 msgstr "nezināma kļūda"
 
@@ -137,10 +137,10 @@ msgstr "DOUBLE"
 msgid "ARG"
 msgstr "ARGUMENTS"
 
-#: src/popthelp.c:616
+#: src/popthelp.c:608
 msgid "Usage:"
 msgstr "Lietošana:"
 
-#: src/popthelp.c:638
+#: src/popthelp.c:630
 msgid "[OPTION...]"
 msgstr "[IESPĒJAS..]"

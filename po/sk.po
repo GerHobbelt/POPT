@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popt 1.11\n"
 "Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
-"POT-Creation-Date: 2020-06-23 13:29+0300\n"
+"POT-Creation-Date: 2020-05-13 11:40+0300\n"
 "PO-Revision-Date: 1999-08-04 21:40+0200\n"
 "Last-Translator: Stanislav Meduna <stano@eunet.sk>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
@@ -15,56 +15,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/popt.c:46
+#: src/popt.c:37
 msgid "unknown errno"
 msgstr ""
 
-#: src/popt.c:1206
+#: src/popt.c:1196
 #, c-format
 msgid "option type (%u) not implemented in popt\n"
 msgstr ""
 
-#: src/popt.c:1625
+#: src/popt.c:1607
 msgid "missing argument"
 msgstr ""
 
-#: src/popt.c:1627
+#: src/popt.c:1609
 msgid "unknown option"
 msgstr ""
 
-#: src/popt.c:1629
+#: src/popt.c:1611
 msgid "mutually exclusive logical operations requested"
 msgstr ""
 
-#: src/popt.c:1631
+#: src/popt.c:1613
 msgid "opt->arg should not be NULL"
 msgstr ""
 
-#: src/popt.c:1633
+#: src/popt.c:1615
 msgid "aliases nested too deeply"
 msgstr ""
 
-#: src/popt.c:1635
+#: src/popt.c:1617
 msgid "error in parameter quoting"
 msgstr ""
 
-#: src/popt.c:1637
+#: src/popt.c:1619
 msgid "invalid numeric value"
 msgstr ""
 
-#: src/popt.c:1639
+#: src/popt.c:1621
 msgid "number too large or too small"
 msgstr ""
 
-#: src/popt.c:1641
+#: src/popt.c:1623
 msgid "memory allocation failed"
 msgstr ""
 
-#: src/popt.c:1643
+#: src/popt.c:1625
 msgid "config file failed sanity test"
 msgstr ""
 
-#: src/popt.c:1647
+#: src/popt.c:1629
 msgid "unknown error"
 msgstr ""
 
@@ -133,10 +133,10 @@ msgstr ""
 msgid "ARG"
 msgstr ""
 
-#: src/popthelp.c:616
+#: src/popthelp.c:608
 msgid "Usage:"
 msgstr ""
 
-#: src/popthelp.c:638
+#: src/popthelp.c:630
 msgid "[OPTION...]"
 msgstr ""
