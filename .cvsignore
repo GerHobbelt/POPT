@@ -2,6 +2,7 @@
 .deps
 .depend
 .libs
+.syntastic_*
 ABOUT-NLS
 ChangeLog
 Doxyfile
@@ -24,6 +25,7 @@ config.sub
 configmake.h
 configure
 cov-int
+cscope.*
 doxygen
 depcomp
 install-sh

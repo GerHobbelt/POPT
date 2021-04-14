@@ -1,130 +1,128 @@
-# Slovenian translation for popt.
-# Copyright (C) 2000 - 2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the popt package.
-# Roman Maurer <roman.maurer@hermes.si>, 2000.
-# Klemen Košir <klemen.kosir@gmx.com>, 2012.
+# Bing automated translation of popt messages
+# This file is put in the public domain.
+# bing-lt <popt-devel@rpm5.org>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.14\n"
+"Project-Id-Version: popt 1.17\n"
 "Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
 "POT-Creation-Date: 2015-05-12 18:30-0400\n"
-"PO-Revision-Date: 2012-03-05 10:25+0100\n"
-"Last-Translator: Klemen Košir <klemen.kosir@gmx.com>\n"
-"Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
-"Language: sl\n"
+"PO-Revision-Date: 2015-05-12 17:16-0400\n"
+"Last-Translator: bing-lt <popt-devel@rpm5.org>\n"
+"Language-Team: bing-lt <popt-devel@rpm5.org>\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: popt.c:54
 msgid "unknown errno"
-msgstr "neznana številka napake"
+msgstr "nežinomas errno"
 
 #: popt.c:1441
 #, c-format
 msgid "option type (%u) not implemented in popt\n"
-msgstr "vrsta možnosti (%u) ni podprta\n"
+msgstr "variantas (%u) tipo nėra įdiegto popt\n"
 
 #: popt.c:1894
 msgid "missing argument"
-msgstr "manjkajoč argument"
+msgstr "trūksta argumentas"
 
 #: popt.c:1896
 msgid "unknown option"
-msgstr "neznana možnost"
+msgstr "nežinomas variantas"
 
 #: popt.c:1898
 msgid "mutually exclusive logical operations requested"
-msgstr "zahtevani so medsebojno izključujoči logični operatorji"
+msgstr "tarpusavyje nesuderinami logiška operacijoms"
 
 #: popt.c:1900
 msgid "opt->arg should not be NULL"
-msgstr "opt->arg ne sme biti NULL"
+msgstr "pasirinkti-> arg neturėtų būti NULL"
 
 #: popt.c:1902
 msgid "aliases nested too deeply"
-msgstr "vzdevki so vgnezdeni pregloboko"
+msgstr "Pravardės įdėtos pernelyg giliai"
 
 #: popt.c:1904
 msgid "error in parameter quoting"
-msgstr "napaka pri navajanju parametra"
+msgstr "klaida parametras, cituodamas"
 
 #: popt.c:1906
 msgid "invalid numeric value"
-msgstr "neveljavna številska vrednost"
+msgstr "Neleistina skaitinė reikšmė"
 
 #: popt.c:1908
 msgid "number too large or too small"
-msgstr "število je preveliko ali premajhno"
+msgstr "skaičius per didelis arba per mažas"
 
 #: popt.c:1910
 msgid "memory allocation failed"
-msgstr "dodeljevanje pomnilnika ni uspelo"
+msgstr "atminties paskirstymo nepavyko"
 
 #: popt.c:1912
 msgid "config file failed sanity test"
-msgstr ""
+msgstr "konfigūracijos failo nepavyko normalumas bandymas"
 
 #: popt.c:1914
 msgid "option does not take an argument"
-msgstr ""
+msgstr "galimybė nesiima argumentas"
 
 #: popt.c:1916
 msgid "stack underflow"
-msgstr ""
+msgstr "rietuvės apačios"
 
 #: popt.c:1918
 msgid "stack overflow"
-msgstr ""
+msgstr "rietuvės perpilda"
 
 #: popt.c:1922
 msgid "unknown error"
-msgstr "neznana napaka"
+msgstr "Nežinoma klaida"
 
 #: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
-msgstr "Izpiše pomoč."
+msgstr "Rodyti šį žinyno pranešimą"
 
 #: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
-msgstr "Izpiše kratka navodila za uporabo."
+msgstr "Rodyti trumpas naudojimo pranešimą"
 
 #: popthelp.c:99
 msgid "Display option defaults in message"
-msgstr "Izpiše privzete vrednosti možnosti."
+msgstr "Galimybė pagal nutylėjimą rodomi pranešimą"
 
 #: popthelp.c:101
 msgid "Terminate options"
-msgstr "Konec možnosti"
+msgstr "Nutraukti parinktys"
 
 #: popthelp.c:200
 msgid "Help options:"
-msgstr "Možnosti pomoči:"
+msgstr "Padėti parinktys:"
 
 #: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
-msgstr "Možnosti, podprte s popt alias/exec:"
+msgstr "Galimybes įgyvendinama per popt alias/exec:"
 
 #: popthelp.c:209
 msgid "NONE"
-msgstr "BREZ"
+msgstr "NĖ VIENAS"
 
 #: popthelp.c:211
 msgid "VAL"
-msgstr "VREDNOST"
+msgstr "VAL"
 
 #: popthelp.c:215
 msgid "INT"
-msgstr "CELO_ŠTEVILO"
+msgstr "LC"
 
 #: popthelp.c:216
 msgid "SHORT"
-msgstr ""
+msgstr "TRUMPAS"
 
 #: popthelp.c:217
 msgid "LONG"
-msgstr "LONG"
+msgstr "ILGAS"
 
 #: popthelp.c:218
 msgid "LONGLONG"
@@ -132,24 +130,24 @@ msgstr "LONGLONG"
 
 #: popthelp.c:219
 msgid "STRING"
-msgstr "NIZ"
+msgstr "EILUTĖ"
 
 #: popthelp.c:220
 msgid "FLOAT"
-msgstr "PLAVAJOČA_VEJICA"
+msgstr "PLŪDĖ"
 
 #: popthelp.c:221
 msgid "DOUBLE"
-msgstr "DOUBLE"
+msgstr "DUKART"
 
 #: popthelp.c:224
 msgid "ARG"
-msgstr "ARGUMENT"
+msgstr "ARG"
 
 #: popthelp.c:665
 msgid "Usage:"
-msgstr "Uporaba:"
+msgstr "Naudojimas:"
 
 #: popthelp.c:690
 msgid "[OPTION...]"
-msgstr "[MOŽNOST ...]"
+msgstr "[PASIRINKIMO...]"

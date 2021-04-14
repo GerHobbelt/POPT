@@ -1,155 +1,153 @@
-# Slovenian translation for popt.
-# Copyright (C) 2000 - 2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the popt package.
-# Roman Maurer <roman.maurer@hermes.si>, 2000.
-# Klemen Košir <klemen.kosir@gmx.com>, 2012.
+# Bing automated translation of popt messages
+# This file is put in the public domain.
+# bing-ur <popt-devel@rpm5.org>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.14\n"
+"Project-Id-Version: popt 1.17\n"
 "Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
 "POT-Creation-Date: 2015-05-12 18:30-0400\n"
-"PO-Revision-Date: 2012-03-05 10:25+0100\n"
-"Last-Translator: Klemen Košir <klemen.kosir@gmx.com>\n"
-"Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
-"Language: sl\n"
+"PO-Revision-Date: 2015-05-12 17:17-0400\n"
+"Last-Translator: bing-ur <popt-devel@rpm5.org>\n"
+"Language-Team: bing-ur <popt-devel@rpm5.org>\n"
+"Language: ur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: popt.c:54
 msgid "unknown errno"
-msgstr "neznana številka napake"
+msgstr "نامعلوم اررنو"
 
 #: popt.c:1441
 #, c-format
 msgid "option type (%u) not implemented in popt\n"
-msgstr "vrsta možnosti (%u) ni podprta\n"
+msgstr "پاوپٹ میں لاگو نہیں اختیار کی قسم (%u)\n"
 
 #: popt.c:1894
 msgid "missing argument"
-msgstr "manjkajoč argument"
+msgstr "غائب دلیل"
 
 #: popt.c:1896
 msgid "unknown option"
-msgstr "neznana možnost"
+msgstr "نامعلوم اختیارات"
 
 #: popt.c:1898
 msgid "mutually exclusive logical operations requested"
-msgstr "zahtevani so medsebojno izključujoči logični operatorji"
+msgstr "باہمی ناشمول منطقی کارروائیوں کی درخواست کی"
 
 #: popt.c:1900
 msgid "opt->arg should not be NULL"
-msgstr "opt->arg ne sme biti NULL"
+msgstr "آپٹ آؤٹ-> ارگ صفر کو ہونا نہیں چاہیے"
 
 #: popt.c:1902
 msgid "aliases nested too deeply"
-msgstr "vzdevki so vgnezdeni pregloboko"
+msgstr "عرفی نام گہرائی سے ترتیب میں رکھے"
 
 #: popt.c:1904
 msgid "error in parameter quoting"
-msgstr "napaka pri navajanju parametra"
+msgstr "پیرامیٹر کے حوالے سے رپورٹ میں نقص"
 
 #: popt.c:1906
 msgid "invalid numeric value"
-msgstr "neveljavna številska vrednost"
+msgstr "ناجائز عددی قدر"
 
 #: popt.c:1908
 msgid "number too large or too small"
-msgstr "število je preveliko ali premajhno"
+msgstr "بہت بڑا یا بہت چھوٹا نمبر"
 
 #: popt.c:1910
 msgid "memory allocation failed"
-msgstr "dodeljevanje pomnilnika ni uspelo"
+msgstr "ناکام میموری تعین"
 
 #: popt.c:1912
 msgid "config file failed sanity test"
-msgstr ""
+msgstr "تشکیل مسل ناکام وویک ٹیسٹ"
 
 #: popt.c:1914
 msgid "option does not take an argument"
-msgstr ""
+msgstr "اختیار ایک دلیل نہیں ملتا"
 
 #: popt.c:1916
 msgid "stack underflow"
-msgstr ""
+msgstr "اسٹیک انڈرفلاوو"
 
 #: popt.c:1918
 msgid "stack overflow"
-msgstr ""
+msgstr "تھاک ڈبونا"
 
 #: popt.c:1922
 msgid "unknown error"
-msgstr "neznana napaka"
+msgstr "نامعلوم نقص"
 
 #: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
-msgstr "Izpiše pomoč."
+msgstr "یہ مدد پیغام کی نمایش کریں"
 
 #: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
-msgstr "Izpiše kratka navodila za uporabo."
+msgstr "ڈسپلے مختصر استعمال پیغام"
 
 #: popthelp.c:99
 msgid "Display option defaults in message"
-msgstr "Izpiše privzete vrednosti možnosti."
+msgstr "ڈسپلے آپشن طے شدہ پیغام میں"
 
 #: popthelp.c:101
 msgid "Terminate options"
-msgstr "Konec možnosti"
+msgstr "اختیارات کو ختم"
 
 #: popthelp.c:200
 msgid "Help options:"
-msgstr "Možnosti pomoči:"
+msgstr "مدد اختیارات:"
 
 #: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
-msgstr "Možnosti, podprte s popt alias/exec:"
+msgstr "اختیارات پاوپٹ عرف/ک کے ذریعے نافذ کیا گیا ہے:"
 
 #: popthelp.c:209
 msgid "NONE"
-msgstr "BREZ"
+msgstr "کوئی نہیں"
 
 #: popthelp.c:211
 msgid "VAL"
-msgstr "VREDNOST"
+msgstr "وال"
 
 #: popthelp.c:215
 msgid "INT"
-msgstr "CELO_ŠTEVILO"
+msgstr "جہاںایک"
 
 #: popthelp.c:216
 msgid "SHORT"
-msgstr ""
+msgstr "مختصر"
 
 #: popthelp.c:217
 msgid "LONG"
-msgstr "LONG"
+msgstr "لمبا"
 
 #: popthelp.c:218
 msgid "LONGLONG"
-msgstr "LONGLONG"
+msgstr "لونگلونگ"
 
 #: popthelp.c:219
 msgid "STRING"
-msgstr "NIZ"
+msgstr "سلک"
 
 #: popthelp.c:220
 msgid "FLOAT"
-msgstr "PLAVAJOČA_VEJICA"
+msgstr "اپلانا"
 
 #: popthelp.c:221
 msgid "DOUBLE"
-msgstr "DOUBLE"
+msgstr "ڈبل"
 
 #: popthelp.c:224
 msgid "ARG"
-msgstr "ARGUMENT"
+msgstr "ارگ"
 
 #: popthelp.c:665
 msgid "Usage:"
-msgstr "Uporaba:"
+msgstr "استعمال:"
 
 #: popthelp.c:690
 msgid "[OPTION...]"
-msgstr "[MOŽNOST ...]"
+msgstr "[اختیار...]"

@@ -1,130 +1,128 @@
-# Slovenian translation for popt.
-# Copyright (C) 2000 - 2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the popt package.
-# Roman Maurer <roman.maurer@hermes.si>, 2000.
-# Klemen Košir <klemen.kosir@gmx.com>, 2012.
+# Bing automated translation of popt messages
+# This file is put in the public domain.
+# bing-cy <popt-devel@rpm5.org>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.14\n"
+"Project-Id-Version: popt 1.17\n"
 "Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
 "POT-Creation-Date: 2015-05-12 18:30-0400\n"
-"PO-Revision-Date: 2012-03-05 10:25+0100\n"
-"Last-Translator: Klemen Košir <klemen.kosir@gmx.com>\n"
-"Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
-"Language: sl\n"
+"PO-Revision-Date: 2015-05-12 17:15-0400\n"
+"Last-Translator: bing-cy <popt-devel@rpm5.org>\n"
+"Language-Team: bing-cy <popt-devel@rpm5.org>\n"
+"Language: cy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: popt.c:54
 msgid "unknown errno"
-msgstr "neznana številka napake"
+msgstr "errno anhysbys"
 
 #: popt.c:1441
 #, c-format
 msgid "option type (%u) not implemented in popt\n"
-msgstr "vrsta možnosti (%u) ni podprta\n"
+msgstr "math o ddewis (%u) ar waith nid yn popt\n"
 
 #: popt.c:1894
 msgid "missing argument"
-msgstr "manjkajoč argument"
+msgstr "dadl ar goll"
 
 #: popt.c:1896
 msgid "unknown option"
-msgstr "neznana možnost"
+msgstr "opsiwn anhysbys"
 
 #: popt.c:1898
 msgid "mutually exclusive logical operations requested"
-msgstr "zahtevani so medsebojno izključujoči logični operatorji"
+msgstr "gweithrediadau rhesymegol gilydd gofynnir"
 
 #: popt.c:1900
 msgid "opt->arg should not be NULL"
-msgstr "opt->arg ne sme biti NULL"
+msgstr "dewis-> arg ni ddylid nwl"
 
 #: popt.c:1902
 msgid "aliases nested too deeply"
-msgstr "vzdevki so vgnezdeni pregloboko"
+msgstr "enwau eraill nythu rhy ddwfn"
 
 #: popt.c:1904
 msgid "error in parameter quoting"
-msgstr "napaka pri navajanju parametra"
+msgstr "Gwall wrth ddyfynnu'r paramedr"
 
 #: popt.c:1906
 msgid "invalid numeric value"
-msgstr "neveljavna številska vrednost"
+msgstr "gwerth rhifol annilys"
 
 #: popt.c:1908
 msgid "number too large or too small"
-msgstr "število je preveliko ali premajhno"
+msgstr "nifer rhy fawr neu'n rhy fach"
 
 #: popt.c:1910
 msgid "memory allocation failed"
-msgstr "dodeljevanje pomnilnika ni uspelo"
+msgstr "dyrannu cof wedi methu"
 
 #: popt.c:1912
 msgid "config file failed sanity test"
-msgstr ""
+msgstr "prawf aflwyddiannus gallineb ffeil ffurfweddu"
 
 #: popt.c:1914
 msgid "option does not take an argument"
-msgstr ""
+msgstr "Nid yw'r opsiwn yn cymryd dadl"
 
 #: popt.c:1916
 msgid "stack underflow"
-msgstr ""
+msgstr "stacio underflow"
 
 #: popt.c:1918
 msgid "stack overflow"
-msgstr ""
+msgstr "gorlifo pentwr"
 
 #: popt.c:1922
 msgid "unknown error"
-msgstr "neznana napaka"
+msgstr "Gwall anhysbys"
 
 #: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
-msgstr "Izpiše pomoč."
+msgstr "Dangos neges hon helpu"
 
 #: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
-msgstr "Izpiše kratka navodila za uporabo."
+msgstr "Arddangos defnydd byr neges"
 
 #: popthelp.c:99
 msgid "Display option defaults in message"
-msgstr "Izpiše privzete vrednosti možnosti."
+msgstr "Arddangos rhagosodiadau opsiwn mewn neges"
 
 #: popthelp.c:101
 msgid "Terminate options"
-msgstr "Konec možnosti"
+msgstr "Derfynu opsiynau"
 
 #: popthelp.c:200
 msgid "Help options:"
-msgstr "Možnosti pomoči:"
+msgstr "Dewisiadau help:"
 
 #: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
-msgstr "Možnosti, podprte s popt alias/exec:"
+msgstr "Opsiynau ar waith drwy gyfrwng popt enw arall/gweithredol:"
 
 #: popthelp.c:209
 msgid "NONE"
-msgstr "BREZ"
+msgstr "DIM"
 
 #: popthelp.c:211
 msgid "VAL"
-msgstr "VREDNOST"
+msgstr "VAL"
 
 #: popthelp.c:215
 msgid "INT"
-msgstr "CELO_ŠTEVILO"
+msgstr "CYFD"
 
 #: popthelp.c:216
 msgid "SHORT"
-msgstr ""
+msgstr "FER"
 
 #: popthelp.c:217
 msgid "LONG"
-msgstr "LONG"
+msgstr "HIR"
 
 #: popthelp.c:218
 msgid "LONGLONG"
@@ -132,24 +130,24 @@ msgstr "LONGLONG"
 
 #: popthelp.c:219
 msgid "STRING"
-msgstr "NIZ"
+msgstr "LLINYN"
 
 #: popthelp.c:220
 msgid "FLOAT"
-msgstr "PLAVAJOČA_VEJICA"
+msgstr "ARNOFIO"
 
 #: popthelp.c:221
 msgid "DOUBLE"
-msgstr "DOUBLE"
+msgstr "DWBL"
 
 #: popthelp.c:224
 msgid "ARG"
-msgstr "ARGUMENT"
+msgstr "ARG"
 
 #: popthelp.c:665
 msgid "Usage:"
-msgstr "Uporaba:"
+msgstr "Defnydd:"
 
 #: popthelp.c:690
 msgid "[OPTION...]"
-msgstr "[MOŽNOST ...]"
+msgstr "[DEWIS...]"
