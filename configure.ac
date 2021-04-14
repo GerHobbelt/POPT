@@ -282,7 +282,7 @@ AS_IF([test "x$enable_build_gcov" != xno],
 AM_CONDITIONAL([HAVE_LCOV], [test x$LCOV != xno])
 
 # Check for api-sanity-autotest.pl Makefile conditional support for check-local
-AC_PATH_PROG(API_SANITY_AUTOTEST,api-sanity-autotest.pl,NO_API_SANITY_AUTOTEST)
+AM_C_PROTOTYPES
 AM_CONDITIONAL([HAVE_API_SANITY_AUTOTEST], [test "x$API_SANITY_AUTOTEST" != xNO_API_SANITY_AUTOTEST])
 # Check for splint Makefile conditional support 
 AC_PATH_PROG(SPLINT,splint,NO_SPLINT)
