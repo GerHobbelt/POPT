@@ -1,20 +1,22 @@
-# Catalan translation of popt.
-# Copyright © Free Software Foundation, Inc.
-# This file is distributed under the same license as the popt package.
-# Jordi Mallach <jordi@sindominio.net>, 2006.
-#
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# Panu Matilainen <pmatilai@redhat.com>, 2020.
+# Jordi Mallach <jordi@debian.org>, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.7\n"
+"Project-Id-Version: popt 1.18\n"
 "Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
 "POT-Creation-Date: 2020-06-23 13:29+0300\n"
-"PO-Revision-Date: 2006-03-13 10:22+0000\n"
-"Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
-"Language-Team: Catalan <ca@dodds.net>\n"
+"PO-Revision-Date: 2020-09-03 12:48+0000\n"
+"Last-Translator: Jordi Mallach <jordi@debian.org>\n"
+"Language-Team: Catalan <https://translate.fedoraproject.org/projects/popt/"
+"master/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.2.2\n"
 
 #: src/popt.c:46
 msgid "unknown errno"
