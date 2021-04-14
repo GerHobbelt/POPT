@@ -1,156 +1,107 @@
-# Slovenian translation for popt.
-# Copyright (C) 2000 - 2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the popt package.
-# Roman Maurer <roman.maurer@hermes.si>, 2000.
-# Klemen Košir <klemen.kosir@gmx.com>, 2012.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.14\n"
-"Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
-"POT-Creation-Date: 2017-03-19 12:46-0400\n"
-"PO-Revision-Date: 2012-03-05 10:25+0100\n"
-"Last-Translator: Klemen Košir <klemen.kosir@gmx.com>\n"
-"Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
+"Project-Id-Version: popt 1.11\n"
+"Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
+"POT-Creation-Date: 2020-06-23 13:29+0300\n"
+"PO-Revision-Date: 2000-09-05 12:30+0200\n"
+"Last-Translator: Roman Maurer <roman.maurer@hermes.si>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
 
-#: popt.c:54
 msgid "unknown errno"
-msgstr "neznana številka napake"
+msgstr ""
 
-#: popt.c:1453
-#, fuzzy, c-format
-msgid "option type (%u) not implemented in popt"
-msgstr "vrsta možnosti (%u) ni podprta\n"
+#, c-format
+msgid "option type (%u) not implemented in popt\n"
+msgstr ""
 
-#: popt.c:1902
 msgid "missing argument"
-msgstr "manjkajoč argument"
+msgstr ""
 
-#: popt.c:1904
 msgid "unknown option"
-msgstr "neznana možnost"
+msgstr ""
 
-#: popt.c:1906
 msgid "mutually exclusive logical operations requested"
-msgstr "zahtevani so medsebojno izključujoči logični operatorji"
+msgstr ""
 
-#: popt.c:1908
 msgid "opt->arg should not be NULL"
-msgstr "opt->arg ne sme biti NULL"
+msgstr ""
 
-#: popt.c:1910
 msgid "aliases nested too deeply"
-msgstr "vzdevki so vgnezdeni pregloboko"
+msgstr ""
 
-#: popt.c:1912
 msgid "error in parameter quoting"
-msgstr "napaka pri navajanju parametra"
+msgstr ""
 
-#: popt.c:1914
 msgid "invalid numeric value"
-msgstr "neveljavna številska vrednost"
+msgstr ""
 
-#: popt.c:1916
 msgid "number too large or too small"
-msgstr "število je preveliko ali premajhno"
+msgstr ""
 
-#: popt.c:1918
 msgid "memory allocation failed"
-msgstr "dodeljevanje pomnilnika ni uspelo"
+msgstr ""
 
-#: popt.c:1920
 msgid "config file failed sanity test"
 msgstr ""
 
-#: popt.c:1922
-msgid "option does not take an argument"
-msgstr ""
-
-#: popt.c:1924
-msgid "stack underflow"
-msgstr ""
-
-#: popt.c:1926
-msgid "stack overflow"
-msgstr ""
-
-#: popt.c:1930
 msgid "unknown error"
-msgstr "neznana napaka"
+msgstr ""
 
-#: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
-msgstr "Izpiše pomoč."
+msgstr "Prikaži to sporočilo s pomočjo"
 
-#: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
-msgstr "Izpiše kratka navodila za uporabo."
+msgstr "Prikaži kratko sporočilo o uporabi"
 
-#: popthelp.c:99
+#, fuzzy
 msgid "Display option defaults in message"
-msgstr "Izpiše privzete vrednosti možnosti."
+msgstr "Prikaži kratko sporočilo o uporabi"
 
-#: popthelp.c:101
 msgid "Terminate options"
-msgstr "Konec možnosti"
+msgstr ""
 
-#: popthelp.c:200
 msgid "Help options:"
-msgstr "Možnosti pomoči:"
+msgstr ""
 
-#: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
-msgstr "Možnosti, podprte s popt alias/exec:"
+msgstr ""
 
-#: popthelp.c:209
 msgid "NONE"
-msgstr "BREZ"
+msgstr ""
 
-#: popthelp.c:211
 msgid "VAL"
-msgstr "VREDNOST"
+msgstr ""
 
-#: popthelp.c:215
 msgid "INT"
-msgstr "CELO_ŠTEVILO"
+msgstr ""
 
-#: popthelp.c:216
 msgid "SHORT"
 msgstr ""
 
-#: popthelp.c:217
 msgid "LONG"
-msgstr "LONG"
+msgstr ""
 
-#: popthelp.c:218
 msgid "LONGLONG"
-msgstr "LONGLONG"
+msgstr ""
 
-#: popthelp.c:219
 msgid "STRING"
-msgstr "NIZ"
+msgstr ""
 
-#: popthelp.c:220
 msgid "FLOAT"
-msgstr "PLAVAJOČA_VEJICA"
+msgstr ""
 
-#: popthelp.c:221
 msgid "DOUBLE"
-msgstr "DOUBLE"
+msgstr ""
 
-#: popthelp.c:224
 msgid "ARG"
-msgstr "ARGUMENT"
+msgstr ""
 
-#: popthelp.c:665
 msgid "Usage:"
-msgstr "Uporaba:"
+msgstr ""
 
-#: popthelp.c:690
 msgid "[OPTION...]"
-msgstr "[MOŽNOST ...]"
+msgstr ""

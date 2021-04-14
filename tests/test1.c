@@ -4,96 +4,58 @@
 
 #include "system.h"
 
-/*@unchecked@*/
 static int pass2 = 0;
-static void option_callback(/*@unused@*/ UNUSED(poptContext con),
-		/*@unused@*/ UNUSED(enum poptCallbackReason reason),
+static void option_callback(UNUSED(poptContext con),
+		UNUSED(enum poptCallbackReason reason),
 		const struct poptOption * opt,
 		char * arg, void * data)
-	/*@globals fileSystem @*/
-	/*@modifies fileSystem @*/
 {
     if (pass2)
 	fprintf(stdout, "callback: %c %s %s ", opt->val, (char *) data, arg);
 }
 
-/*@unchecked@*/
 static int arg1 = 0;
-/*@unchecked@*/ /*@observer@*/
-static char * arg2 = "(none)";
-/*@unchecked@*/
+static const char * arg2 = "(none)";
 static int arg3 = 0;
-/*@unchecked@*/
 static int inc = 0;
-/*@unchecked@*/
 static int shortopt = 0;
 
-/*@unchecked@*/
 static int aVal = 141421;
-/*@unchecked@*/
 static int bVal = 141421;
-/*@unchecked@*/
 static unsigned int aFlag = 0x8aceU;
-/*@unchecked@*/
 static unsigned int bFlag = 0x8aceU;
 
-/*@unchecked@*/
 static short aShort = (short)4523;
-/*@unchecked@*/
 static short bShort = (short)4523;
-/*@unchecked@*/
 static int aInt = 271828;
-/*@unchecked@*/
 static int bInt = 271828;
-/*@unchecked@*/
 static long aLong = 738905609L;
-/*@unchecked@*/
 static long bLong = 738905609L;
-/*@unchecked@*/
 static long long aLongLong = 738905609LL;
-/*@unchecked@*/
 static long long bLongLong = 738905609LL;
-/*@unchecked@*/
-static float aFloat = 3.1415926535;
-/*@unchecked@*/
-static float bFloat = 3.1415926535;
-/*@unchecked@*/
+static float aFloat = 3.1415926535f;
+static float bFloat = 3.1415926535f;
 static double aDouble = 9.86960440108935861883;
-/*@unchecked@*/
 static double bDouble = 9.86960440108935861883;
 
-/*@unchecked@*/
-static int aCounter = 34543;
-/*@unchecked@*/
-static int bCounter = 34543;
-
-/*@unchecked@*/ /*@only@*/ /*@null@*/
 static const char ** aArgv = NULL;
-/*@unchecked@*/ /*@only@*/ /*@null@*/
 static void * aBits = NULL;
-/*@unchecked@*/ /*@observer@*/
 static const char *attributes[] = {
     "foo", "bar", "baz", "bing", "bang", "boom"
 };
-/*@unchecked@*/
 static size_t nattributes = (sizeof(attributes) / sizeof(attributes[0]));
 
-/*@unchecked@*/ /*@null@*/
 static char * oStr = (char *) -1;
-/*@unchecked@*/
 static int singleDash = 0;
 
-/*@unchecked@*/ /*@observer@*/
-static char * lStr =
+static const char * lStr =
 "This tests default strings and exceeds the ... limit. "
 "123456789+123456789+123456789+123456789+123456789+ "
 "123456789+123456789+123456789+123456789+123456789+ "
 "123456789+123456789+123456789+123456789+123456789+ "
 "123456789+123456789+123456789+123456789+123456789+ ";
-/*@unchecked@*/ /*@null@*/
-static char * nStr = NULL;
+static char * nStr = NULL; 
 
-/*@unchecked@*/
 static struct poptOption moreCallbackArgs[] = {
   { NULL, '\0', POPT_ARG_CALLBACK|POPT_CBFLAG_INC_DATA,
 	(void *)option_callback, 0,
@@ -103,7 +65,6 @@ static struct poptOption moreCallbackArgs[] = {
   POPT_TABLEEND
 };
 
-/*@unchecked@*/
 static struct poptOption callbackArgs[] = {
   { NULL, '\0', POPT_ARG_CALLBACK, (void *)option_callback, 0,
 	"sampledata", NULL },
@@ -114,17 +75,15 @@ static struct poptOption callbackArgs[] = {
   POPT_TABLEEND
 };
 
-/*@unchecked@*/
 static struct poptOption moreArgs[] = {
   { "inc", 'I', 0, &inc, 0, "An included argument", NULL },
   POPT_TABLEEND
 };
 
-/*@unchecked@*/
 static struct poptOption options[] = {
   { NULL, '\0', POPT_ARG_INCLUDE_TABLE, &moreCallbackArgs, 0,
 	"arg for cb2", NULL },
-  { "arg1", '\0', POPT_ARG_NONE, &arg1, 0, "First argument with a really long"
+  { "arg1", '\0', 0, &arg1, 0, "First argument with a really long"
 	    " description. After all, we have to test argument help"
 	    " wrapping somehow, right?", NULL },
   { "arg2", '2', POPT_ARG_STRING | POPT_ARGFLAG_SHOW_DEFAULT, &arg2, 0,
@@ -169,20 +128,11 @@ static struct poptOption options[] = {
    { "bits", '\0', POPT_ARG_BITSET|POPT_ARGFLAG_DOC_HIDDEN, &aBits, 0,
 	"POPT_ARG_BITSET: add string to bit set (can be used multiple times)","STRING"},
 
-   { "verbose", 'v', POPT_ARG_VAL|POPT_ARGFLAG_CALCULATOR|POPT_ARGFLAG_DOC_HIDDEN, &aCounter, 1,
-	"POPT_ARGFLAG_CALCULATOR: increment a counter", "+" },
-   { "quiet", 'q', POPT_ARG_VAL|POPT_ARGFLAG_NOT|POPT_ARGFLAG_CALCULATOR|POPT_ARGFLAG_DOC_HIDDEN, &aCounter, 1,
-	"POPT_ARGFLAG_CALCULATOR: decrement a counter", "-" },
-   { "add", '\0', POPT_ARG_VAL|POPT_ARGFLAG_CALCULATOR|POPT_ARGFLAG_DOC_HIDDEN, &aCounter, 24,
-	"POPT_ARGFLAG_CALCULATOR: add a value to a counter", "P 24 +" },
-   { "sub", '\0', POPT_ARG_VAL|POPT_ARGFLAG_NOT|POPT_ARGFLAG_CALCULATOR|POPT_ARGFLAG_DOC_HIDDEN, &aCounter, 24,
-	"POPT_ARGFLAG_CALCULATOR: subtract a value from a counter", "P 24 -" },
-
   { "bitset", '\0', POPT_BIT_SET | POPT_ARGFLAG_TOGGLE | POPT_ARGFLAG_SHOW_DEFAULT, &aFlag, 0x7777,
 	"POPT_BIT_SET: |= 0x7777", 0},
   { "bitclr", '\0', POPT_BIT_CLR | POPT_ARGFLAG_TOGGLE | POPT_ARGFLAG_SHOW_DEFAULT, &aFlag, 0xf842,
 	"POPT_BIT_CLR: &= ~0xf842", 0},
-  { "bitxor", '\0', POPT_ARG_VAL | POPT_ARGFLAG_XOR | POPT_ARGFLAG_SHOW_DEFAULT, &aFlag, (0x8ace^0xfeed),
+  { "bitxor", 'x', POPT_ARG_VAL | POPT_ARGFLAG_XOR | POPT_ARGFLAG_SHOW_DEFAULT, &aFlag, (0x8ace^0xfeed),
 	"POPT_ARGFLAG_XOR: ^= (0x8ace^0xfeed)", 0},
 
   { "nstr", '\0', POPT_ARG_STRING | POPT_ARGFLAG_SHOW_DEFAULT, &nStr, 0,
@@ -202,12 +152,6 @@ static struct poptOption options[] = {
 };
 
 static void resetVars(void)
-	/*@globals arg1, arg2, arg3, inc, shortopt,
-		aVal, aFlag, aShort, aInt, aLong, aLongLong, aFloat, aDouble,
-		aArgv, aBits, oStr, singleDash, pass2 @*/
-	/*@modifies arg1, arg2, arg3, inc, shortopt,
-		aVal, aFlag, aShort, aInt, aLong, aLongLong, aFloat, aDouble,
-		aArgv, aBits, oStr, singleDash, pass2 @*/
 {
     arg1 = 0;
     arg2 = "(none)";
@@ -224,14 +168,11 @@ static void resetVars(void)
     aLongLong = bLongLong;
     aFloat = bFloat;
     aDouble = bDouble;
-    aCounter = bCounter;
 
     if (aArgv) {
 	int i;
 	for (i = 0; aArgv[i] != NULL; i++) {
-/*@-unqualifiedtrans@*/
 	    free((void *)aArgv[i]);
-/*@=unqualifiedtrans@*/
 	    aArgv[i] = NULL;
 	}
 	free(aArgv);
@@ -247,8 +188,6 @@ static void resetVars(void)
 }
 
 int main(int argc, const char ** argv)
-	/*@globals pass2, fileSystem, internalState @*/
-	/*@modifies pass2, fileSystem, internalState @*/
 {
     int rc;
     int ec = 0;
@@ -256,45 +195,24 @@ int main(int argc, const char ** argv)
     const char ** rest;
     int help = 0;
     int usage = 0;
-    char * testpoptrc;
 
 #if defined(HAVE_MCHECK_H) && defined(HAVE_MTRACE)
-    /*@-moduncon -noeffectuncon@*/
     mtrace();   /* Trace malloc only if MALLOC_TRACE=mtrace-output-file. */
-    /*@=moduncon =noeffectuncon@*/
 #endif
 
-/*@-modobserver@*/
     resetVars();
-/*@=modobserver@*/
-/*@-temptrans@*/
     optCon = poptGetContext("test1", argc, argv, options, 0);
-#ifdef HAVE_STDLIB_H
-    testpoptrc = getenv ("testpoptrc");
-    if (testpoptrc != NULL )
-    (void) poptReadConfigFile(optCon, testpoptrc);
-    else {
     (void) poptReadConfigFile(optCon, "./test-poptrc");
-/* XXXX: make distcheck succed : test1 is in popt-<version>/_build */
-    (void) poptReadConfigFile(optCon, "../../test-poptrc");
-    }
-#else
-    (void) poptReadConfigFile(optCon, "./test-poptrc");
-/* XXXX: make distcheck succed : test1 is in popt-<version>/_build */
-    (void) poptReadConfigFile(optCon, "../../test-poptrc");
-#endif
     (void) poptReadDefaultConfig(optCon, 1);
 
     poptSetExecPath(optCon, ".", 1);
 
 #if 1
     while ((rc = poptGetNextOpt(optCon)) > 0)	/* Read all the options ... */
-	{};
+	{}
 
     poptResetContext(optCon);			/* ... and then start over. */
-/*@-modobserver@*/
     resetVars();
-/*@=modobserver@*/
 #endif
 
     pass2 = 1;
@@ -334,21 +252,11 @@ int main(int argc, const char ** argv)
     if (aLong != bLong)
 	fprintf(stdout, " aLong: %ld", aLong);
     if (aLongLong != bLongLong)
-#if defined(_MSC_VER) || defined(__MINGW32__)
-	fprintf(stdout, " aLongLong: %I64d", aLongLong);
-#else
-        fprintf(stdout, " aLongLong: %lld", aLongLong);
-#endif
-/*@-realcompare@*/
+	fprintf(stdout, " aLongLong: %lld", aLongLong);
     if (aFloat != bFloat)
 	fprintf(stdout, " aFloat: %g", (double)aFloat);
     if (aDouble != bDouble)
 	fprintf(stdout, " aDouble: %g", aDouble);
-/*@=realcompare@*/
-
-    if (aCounter != bCounter)
-	fprintf(stdout, " aCounter: %d", aCounter);
-
     if (aArgv != NULL) {
 	const char **av = aArgv;
 	const char * arg;
@@ -367,10 +275,8 @@ int main(int argc, const char ** argv)
 	    separator = ",";
 	}
     }
-/*@-nullpass@*/
     if (oStr != (char *)-1)
 	fprintf(stdout, " oStr: %s", (oStr ? oStr : "(none)"));
-/*@=nullpass@*/
     if (singleDash)
 	fprintf(stdout, " -");
 
@@ -390,9 +296,7 @@ int main(int argc, const char ** argv)
 exit:
     optCon = poptFreeContext(optCon);
 #if defined(HAVE_MCHECK_H) && defined(HAVE_MTRACE)
-    /*@-moduncon -noeffectuncon@*/
     muntrace();   /* Trace malloc only if MALLOC_TRACE=mtrace-output-file. */
-    /*@=moduncon =noeffectuncon@*/
 #endif
     return ec;
 }

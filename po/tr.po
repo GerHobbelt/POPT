@@ -1,158 +1,112 @@
 # Translation of popt to Turkish.
-# Copyright (C) 2007
-# This file is distributed under the same license as the popt package.
-#
 # Nilgun Belma Buguner <nilgun@technologist.com>, 2000.
-# Volkan Gezer <vlkngzr@gmail.com>, 2013.
+# OÄŸuz Ersen <oguzersen@protonmail.com>, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.14\n"
-"Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
-"POT-Creation-Date: 2017-03-19 12:46-0400\n"
-"PO-Revision-Date: 2013-05-29 20:55+0300\n"
-"Last-Translator: Volkan Gezer <vlkngzr@gmail.com>\n"
-"Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
+"Project-Id-Version: popt 1.11\n"
+"Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
+"POT-Creation-Date: 2020-06-23 13:29+0300\n"
+"PO-Revision-Date: 2020-09-03 12:31+0000\n"
+"Last-Translator: OÄŸuz Ersen <oguzersen@protonmail.com>\n"
+"Language-Team: Turkish <https://translate.fedoraproject.org/projects/popt/"
+"master/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-9\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.2.2\n"
 
-#: popt.c:54
 msgid "unknown errno"
-msgstr "bilinmeyen hata no"
+msgstr "bilinmeyen hata numarasÄ± (errno)"
 
-#: popt.c:1453
-#, fuzzy, c-format
-msgid "option type (%u) not implemented in popt"
-msgstr "seçenek türü (%u) popt için uygulanmadı\n"
+#, c-format
+msgid "option type (%u) not implemented in popt\n"
+msgstr "seÃ§enek tÃ¼rÃ¼ (%u) popt'ta uygulanmadÄ±\n"
 
-#: popt.c:1902
 msgid "missing argument"
-msgstr "argüman eksik"
+msgstr "argÃ¼man eksik"
 
-#: popt.c:1904
 msgid "unknown option"
-msgstr "bilinmeyen seçenek"
+msgstr "bilinmeyen seÃ§enek"
 
-#: popt.c:1906
 msgid "mutually exclusive logical operations requested"
-msgstr "birbirini dışlayan mantıksal işlemler istendi"
+msgstr "birbirini dÄ±ÅŸlayan mantÄ±ksal iÅŸlemler istendi"
 
-#: popt.c:1908
 msgid "opt->arg should not be NULL"
-msgstr "opt->arg BOŞ olamaz"
+msgstr "opt->arg NULL olmamalÄ±"
 
-#: popt.c:1910
 msgid "aliases nested too deeply"
-msgstr "adlarda çok fazla içiçelikler"
+msgstr "takma adlar Ã§ok fazla iÃ§ iÃ§e geÃ§miÅŸ"
 
-#: popt.c:1912
 msgid "error in parameter quoting"
-msgstr "parametrelerde tırnak işaretleme hatalı "
+msgstr "parametre tÄ±rnak iÅŸaretleme hatasÄ±"
 
-#: popt.c:1914
 msgid "invalid numeric value"
-msgstr "sayısal değer geçersiz"
+msgstr "sayÄ±sal deÄŸer geÃ§ersiz"
 
-#: popt.c:1916
 msgid "number too large or too small"
-msgstr "sayı ya çok büyük ya da çok küçük"
+msgstr "sayÄ± Ã§ok bÃ¼yÃ¼k veya Ã§ok kÃ¼Ã§Ã¼k"
 
-#: popt.c:1918
 msgid "memory allocation failed"
-msgstr "bellek paylaştırma başarısız"
+msgstr "bellek ayÄ±rma baÅŸarÄ±sÄ±z"
 
-#: popt.c:1920
 msgid "config file failed sanity test"
-msgstr ""
+msgstr "yapÄ±landÄ±rma dosyasÄ± doÄŸruluk testi baÅŸarÄ±sÄ±z"
 
-#: popt.c:1922
-msgid "option does not take an argument"
-msgstr ""
-
-#: popt.c:1924
-msgid "stack underflow"
-msgstr ""
-
-#: popt.c:1926
-msgid "stack overflow"
-msgstr ""
-
-#: popt.c:1930
 msgid "unknown error"
 msgstr "bilinmeyen hata"
 
-#: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
-msgstr "Bu yardım iletisini gösterir"
+msgstr "Bu yardÄ±m mesajÄ±nÄ± gÃ¶ster"
 
-#: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
-msgstr "Kısa bir kullanım iletisi göster"
+msgstr "KÄ±sa bir kullanÄ±m mesajÄ± gÃ¶ster"
 
-#: popthelp.c:99
 msgid "Display option defaults in message"
-msgstr "Mesajda öntanımlı olarak seçeneği göster"
+msgstr "Mesajda Ã¶ntanÄ±mlÄ± seÃ§enekleri gÃ¶ster"
 
-#: popthelp.c:101
 msgid "Terminate options"
-msgstr "Seçenekleri sonlandır"
+msgstr "SeÃ§enekleri sonlandÄ±r"
 
-#: popthelp.c:200
 msgid "Help options:"
-msgstr "Yardım seçenekleri:"
+msgstr "YardÄ±m seÃ§enekleri:"
 
-#: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
-msgstr "Seçenekler popt alias/exec yoluyla uygulandı:"
+msgstr "popt alias/exec aracÄ±lÄ±ÄŸÄ±yla uygulanan seÃ§enekler:"
 
-#: popthelp.c:209
 msgid "NONE"
 msgstr "YOK"
 
-#: popthelp.c:211
 msgid "VAL"
-msgstr "DEĞ"
+msgstr "DEÄER"
 
-#: popthelp.c:215
 msgid "INT"
 msgstr "INT"
 
-#: popthelp.c:216
 msgid "SHORT"
-msgstr ""
+msgstr "SHORT"
 
-#: popthelp.c:217
 msgid "LONG"
 msgstr "LONG"
 
-#: popthelp.c:218
 msgid "LONGLONG"
 msgstr "LONGLONG"
 
-#: popthelp.c:219
 msgid "STRING"
 msgstr "STRING"
 
-#: popthelp.c:220
 msgid "FLOAT"
 msgstr "FLOAT"
 
-#: popthelp.c:221
 msgid "DOUBLE"
 msgstr "DOUBLE"
 
-#: popthelp.c:224
 msgid "ARG"
 msgstr "ARG"
 
-#: popthelp.c:665
 msgid "Usage:"
-msgstr "Kullanımı:"
+msgstr "KullanÄ±m:"
 
-#: popthelp.c:690
 msgid "[OPTION...]"
-msgstr "[SEÇENEK...]"
+msgstr "[SEÃ‡ENEK...]"

@@ -15,7 +15,6 @@ static struct {
 static int loadDict(const char * fn, poptBits * ap)
 {
     char b[BUFSIZ];
-    size_t nb = sizeof(b);
     FILE * fp = fopen(fn, "r");
     char * t, *te;
     int nlines = -1;
@@ -23,7 +22,7 @@ static int loadDict(const char * fn, poptBits * ap)
     if (fp == NULL || ferror(fp)) goto exit;
 
     nlines = 0;
-    while ((t = fgets(b, nb, fp)) != NULL) {
+    while ((t = fgets(b, sizeof(b), fp)) != NULL) {
 	while (*t && isspace(*t)) t++;
 	if (*t == '#') continue;
 	te = t + strlen(t);
@@ -44,7 +43,7 @@ exit:
 static struct poptOption options[] = {
   { "debug", 'd', POPT_BIT_SET|POPT_ARGFLAG_TOGGLE, &_debug, 1,
         "Set debugging.", NULL },
-  { "verbose", 'v', POPT_BIT_SET|POPT_ARGFLAG_TOGGLE, &_verbose, 0,
+  { "verbose", 'v', POPT_BIT_SET|POPT_ARGFLAG_TOGGLE, &_verbose, 1,
         "Set verbosity.", NULL },
 
   POPT_AUTOALIAS
@@ -67,9 +66,9 @@ int main(int argc, const char ** argv)
     /* XXX Scale the Bloom filters in popt. */
     if ((rc = loadDict(dictfn, NULL)) <= 0)
 	goto exit;
-    _poptBitsK = 10;
+    _poptBitsK = 2;
     _poptBitsM = 0;
-    _poptBitsN = 2 * _poptBitsK * rc;
+    _poptBitsN = _poptBitsK * (unsigned)rc;
 
     optCon = poptGetContext("tdict", argc, argv, options, 0);
 
@@ -78,7 +77,7 @@ int main(int argc, const char ** argv)
         char * optArg = poptGetOptArg(optCon);
 	if (optArg) free(optArg);
         switch (rc) {
-        default:	goto exit;	break;
+        default:	goto exit;
         }
     }
     if (rc < -1) {
@@ -121,14 +120,8 @@ int main(int argc, const char ** argv)
     ec = 0;
 
 exit:
-    /* XXX : depends on the /usr/share/dict/words contents so no default*/
-   if (rc >= 0) {
-    if (_debug) {
-    fprintf(stdout, "===== poptBits N:%u M:%u K:%u (%uKb) ",
-	_poptBitsN, _poptBitsM, _poptBitsK, (((_poptBitsM/8)+1)+1023)/1024);
-    }
-    fprintf(stdout, "total(%u) = hits(%u) + misses(%u)\n", e.total, e.hits, e.misses);
-   }
+    fprintf(stdout, "===== poptBits N:%u M:%u K:%u (%uKb) total(%u) = hits(%u) + misses(%u)\n",
+	_poptBitsN, _poptBitsM, _poptBitsK, (((_poptBitsM/8)+1)+1023)/1024, e.total, e.hits, e.misses);
     if (avbits) free(avbits);
     optCon = poptFreeContext(optCon);
 #if defined(HAVE_MCHECK_H) && defined(HAVE_MTRACE)

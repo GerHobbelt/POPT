@@ -1,154 +1,113 @@
 # Indonesian translations for popt package.
 # This file is put in the public domain.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2008.
-#
+# Andika Triwidada <andika@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: popt 1.14\n"
-"Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
-"POT-Creation-Date: 2017-03-19 12:46-0400\n"
-"PO-Revision-Date: 2008-08-26 14:18+0700\n"
-"Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
-"Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
+"Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
+"POT-Creation-Date: 2020-06-23 13:29+0300\n"
+"PO-Revision-Date: 2020-12-17 08:36+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <https://translate.fedoraproject.org/projects/popt/"
+"master/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.3.2\n"
 
-#: popt.c:54
 msgid "unknown errno"
 msgstr "errno tak diketahui"
 
-#: popt.c:1453
-#, fuzzy, c-format
-msgid "option type (%u) not implemented in popt"
+#, c-format
+msgid "option type (%u) not implemented in popt\n"
 msgstr "tipe opsi (%u) tak diimplementasikan di popt\n"
 
-#: popt.c:1902
 msgid "missing argument"
 msgstr "kehilangan argumen"
 
-#: popt.c:1904
 msgid "unknown option"
 msgstr "opsi tak diketahui"
 
-#: popt.c:1906
 msgid "mutually exclusive logical operations requested"
 msgstr "permintaan operasi logika eksklusif secara mutual"
 
-#: popt.c:1908
 msgid "opt->arg should not be NULL"
 msgstr "opt->arg tidak boleh NULL"
 
-#: popt.c:1910
 msgid "aliases nested too deeply"
 msgstr "alias disarangkan terlalu dalam"
 
-#: popt.c:1912
 msgid "error in parameter quoting"
 msgstr "galat di pencantuman parameter"
 
-#: popt.c:1914
 msgid "invalid numeric value"
 msgstr "nilai numerik tidak sah"
 
-#: popt.c:1916
 msgid "number too large or too small"
 msgstr "nomor terlalu besar atau terlalu kecil"
 
-#: popt.c:1918
 msgid "memory allocation failed"
 msgstr "alokasi memori gagal"
 
-#: popt.c:1920
 msgid "config file failed sanity test"
-msgstr ""
+msgstr "berkas konfig gagal uji kewarasan"
 
-#: popt.c:1922
-msgid "option does not take an argument"
-msgstr ""
-
-#: popt.c:1924
-msgid "stack underflow"
-msgstr ""
-
-#: popt.c:1926
-msgid "stack overflow"
-msgstr ""
-
-#: popt.c:1930
 msgid "unknown error"
 msgstr "galat tak diketahui"
 
-#: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
 msgstr "Tampilkan pesan bantuan ini"
 
-#: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
 msgstr "Tampilkan pesan penggunaan singkat"
 
-#: popthelp.c:99
 msgid "Display option defaults in message"
 msgstr "Tampilkan opsi standar dalam pesan"
 
-#: popthelp.c:101
 msgid "Terminate options"
 msgstr "Matikan opsi"
 
-#: popthelp.c:200
 msgid "Help options:"
 msgstr "Opsi bantuan:"
 
-#: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
 msgstr "Opsi diimplementasikan via popt alias/exec:"
 
-#: popthelp.c:209
 msgid "NONE"
 msgstr "NONE"
 
-#: popthelp.c:211
 msgid "VAL"
 msgstr "VAL"
 
-#: popthelp.c:215
 msgid "INT"
 msgstr "INT"
 
-#: popthelp.c:216
 msgid "SHORT"
-msgstr ""
+msgstr "SHORT"
 
-#: popthelp.c:217
 msgid "LONG"
 msgstr "LONG"
 
-#: popthelp.c:218
 msgid "LONGLONG"
 msgstr "LONGLONG"
 
-#: popthelp.c:219
 msgid "STRING"
 msgstr "STRING"
 
-#: popthelp.c:220
 msgid "FLOAT"
 msgstr "FLOAT"
 
-#: popthelp.c:221
 msgid "DOUBLE"
 msgstr "DOUBLE"
 
-#: popthelp.c:224
 msgid "ARG"
 msgstr "ARG"
 
-#: popthelp.c:665
 msgid "Usage:"
 msgstr "Penggunaan:"
 
-#: popthelp.c:690
 msgid "[OPTION...]"
 msgstr "[OPSI...]"

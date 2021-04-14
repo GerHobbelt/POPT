@@ -1,161 +1,108 @@
-# Mensaxes en galego para popt.
-# This file is distributed under the same license as the popt package.
-# Copyright (C) 2012 Leandro Regueiro.
-#
-# Jesús Bravo Álvarez <jba@pobox.com>, 2001.
-# Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-#
-# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
-# colaborar connosco, podes atopar máis información en http://www.trasno.net
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.14\n"
-"Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
-"POT-Creation-Date: 2017-03-19 12:46-0400\n"
-"PO-Revision-Date: 2012-11-10 19:47+0200\n"
-"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
+"Project-Id-Version: popt 1.11\n"
+"Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
+"POT-Creation-Date: 2020-06-23 13:29+0300\n"
+"PO-Revision-Date: 2001-01-17 01:01+0100\n"
+"Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
+"Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: popt.c:54
 msgid "unknown errno"
 msgstr "errno descoñecido"
 
-#: popt.c:1453
 #, fuzzy, c-format
-msgid "option type (%u) not implemented in popt"
-msgstr "tipo de opción (%u) non implementada en popt\n"
+msgid "option type (%u) not implemented in popt\n"
+msgstr "tipo de opción (%d) non implementada en popt\n"
 
-#: popt.c:1902
 msgid "missing argument"
 msgstr "falta un argumento"
 
-#: popt.c:1904
 msgid "unknown option"
 msgstr "opción descoñecida"
 
-#: popt.c:1906
 msgid "mutually exclusive logical operations requested"
 msgstr "solicitáronse operacións lóxicas mutuamente excluíntes"
 
-#: popt.c:1908
 msgid "opt->arg should not be NULL"
-msgstr "opt->arg non debe ser NULL"
+msgstr ""
 
-#: popt.c:1910
 msgid "aliases nested too deeply"
-msgstr "alias aniñados a un nivel demasiado profundo"
+msgstr "aliases aniñados a un nivel demasiado profundo"
 
-#: popt.c:1912
 msgid "error in parameter quoting"
 msgstr "erro nas comiñas do parámetro"
 
-#: popt.c:1914
 msgid "invalid numeric value"
 msgstr "valor numérico non válido"
 
-#: popt.c:1916
 msgid "number too large or too small"
 msgstr "número demasiado grande ou pequeno"
 
-#: popt.c:1918
 msgid "memory allocation failed"
-msgstr "produciuse un erro ao asignar memoria"
+msgstr ""
 
-#: popt.c:1920
 msgid "config file failed sanity test"
 msgstr ""
 
-#: popt.c:1922
-msgid "option does not take an argument"
-msgstr ""
-
-#: popt.c:1924
-msgid "stack underflow"
-msgstr ""
-
-#: popt.c:1926
-msgid "stack overflow"
-msgstr ""
-
-#: popt.c:1930
 msgid "unknown error"
 msgstr "erro descoñecido"
 
-#: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
-msgstr "Mostrar esta mensaxe de axuda"
+msgstr "Amosar esta mensaxe de axuda"
 
-#: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
-msgstr "Mostrar brevemente o xeito de utilización"
+msgstr "Amosar brevemente o xeito de utilización"
 
-#: popthelp.c:99
+#, fuzzy
 msgid "Display option defaults in message"
-msgstr "Mostrar as opcións predefinidas na mensaxe"
+msgstr "Amosar brevemente o xeito de utilización"
 
-#: popthelp.c:101
 msgid "Terminate options"
-msgstr "Opcións de terminación"
+msgstr ""
 
-#: popthelp.c:200
 msgid "Help options:"
-msgstr "Opcións de axuda:"
+msgstr ""
 
-#: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
-msgstr "Opcións implementadas a través de popt alias/exec:"
+msgstr ""
 
-#: popthelp.c:209
 msgid "NONE"
 msgstr "NADA"
 
-#: popthelp.c:211
 msgid "VAL"
 msgstr "VAL"
 
-#: popthelp.c:215
 msgid "INT"
 msgstr "INT"
 
-#: popthelp.c:216
 msgid "SHORT"
 msgstr ""
 
-#: popthelp.c:217
 msgid "LONG"
 msgstr "LONG"
 
-#: popthelp.c:218
+#, fuzzy
 msgid "LONGLONG"
-msgstr "LONGLONG"
+msgstr "LONG"
 
-#: popthelp.c:219
 msgid "STRING"
 msgstr "CADEA"
 
-#: popthelp.c:220
 msgid "FLOAT"
 msgstr "FLOAT"
 
-#: popthelp.c:221
 msgid "DOUBLE"
 msgstr "DOUBLE"
 
-#: popthelp.c:224
 msgid "ARG"
 msgstr "ARG"
 
-#: popthelp.c:665
 msgid "Usage:"
 msgstr "Uso:"
 
-#: popthelp.c:690
 msgid "[OPTION...]"
 msgstr "[OPCIÓN...]"

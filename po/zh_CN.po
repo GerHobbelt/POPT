@@ -1,159 +1,115 @@
-# translation of translation.po to 
+# translation of translation.po to
 # Simplified Chinese Messages for popt
 # Copyright (C) 2005, 2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the popt package.
 # Wei-Lun Chao <chaoweilun@pcmail.com.tw>, 2005.
 # LI Daobing <lidaobing@gmail.com>, 2007, 2008.
-# Jeff Bai <jeffbai@aosc.xyz>, 2015.
-#
+# Charles Lee <lchopn@gmail.com>, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.16\n"
-"Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
-"POT-Creation-Date: 2017-03-19 12:46-0400\n"
-"PO-Revision-Date: 2016-04-27 20:50-0400\n"
-"Last-Translator: Mingye Wang (Arthur2e5) <arthur200126@gmail.com>\n"
-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Project-Id-Version: popt 1.14\n"
+"Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
+"POT-Creation-Date: 2020-06-23 13:29+0300\n"
+"PO-Revision-Date: 2020-10-09 08:30+0000\n"
+"Last-Translator: Charles Lee <lchopn@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
+"projects/popt/master/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 1.8.7\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.2.2\n"
 
-#: popt.c:54
 msgid "unknown errno"
-msgstr "未知的错误号"
+msgstr "未知的错误"
 
-#: popt.c:1453
-#, fuzzy, c-format
-msgid "option type (%u) not implemented in popt"
-msgstr "选项类型 (%u) 未在 popt 中实现\n"
+#, c-format
+msgid "option type (%u) not implemented in popt\n"
+msgstr "选项类别 (%u) 没有在 popt 中实现\n"
 
-#: popt.c:1902
 msgid "missing argument"
 msgstr "缺少参数"
 
-#: popt.c:1904
 msgid "unknown option"
 msgstr "未知的选项"
 
-#: popt.c:1906
 msgid "mutually exclusive logical operations requested"
-msgstr "请求了 XOR 逻辑运算"
+msgstr "需要 XOR 逻辑运算"
 
-#: popt.c:1908
 msgid "opt->arg should not be NULL"
 msgstr "opt->arg 不应该为 NULL"
 
-#: popt.c:1910
 msgid "aliases nested too deeply"
 msgstr "别名嵌套太深"
 
-#: popt.c:1912
 msgid "error in parameter quoting"
 msgstr "参数引号错误"
 
-#: popt.c:1914
 msgid "invalid numeric value"
 msgstr "无效的数值"
 
-#: popt.c:1916
 msgid "number too large or too small"
 msgstr "数值太大或太小"
 
-#: popt.c:1918
 msgid "memory allocation failed"
 msgstr "内存分配错误"
 
-#: popt.c:1920
 msgid "config file failed sanity test"
-msgstr "配置文件无法通过健全测试"
+msgstr "配置文件健全性测试失败"
 
-#: popt.c:1922
-msgid "option does not take an argument"
-msgstr ""
-
-#: popt.c:1924
-msgid "stack underflow"
-msgstr ""
-
-#: popt.c:1926
-msgid "stack overflow"
-msgstr ""
-
-#: popt.c:1930
 msgid "unknown error"
 msgstr "未知的错误"
 
-#: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
 msgstr "显示这个帮助信息"
 
-#: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
 msgstr "显示简短的使用说明"
 
-#: popthelp.c:99
 msgid "Display option defaults in message"
 msgstr "在信息中显示默认的选项"
 
-#: popthelp.c:101
 msgid "Terminate options"
 msgstr "终止选项"
 
-#: popthelp.c:200
 msgid "Help options:"
-msgstr "帮助选项："
+msgstr "帮助选项:"
 
-#: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
 msgstr "通过 popt alias/exec 实现的选项:"
 
-#: popthelp.c:209
 msgid "NONE"
-msgstr "无"
+msgstr "NONE"
 
-#: popthelp.c:211
 msgid "VAL"
-msgstr "值"
+msgstr "VAL"
 
-#: popthelp.c:215
 msgid "INT"
-msgstr "整型"
+msgstr "INT"
 
-#: popthelp.c:216
 msgid "SHORT"
-msgstr "短整"
+msgstr "SHORT"
 
-#: popthelp.c:217
 msgid "LONG"
-msgstr "长整"
+msgstr "LONG"
 
-#: popthelp.c:218
 msgid "LONGLONG"
-msgstr "长长整"
+msgstr "LONGLONG"
 
-#: popthelp.c:219
 msgid "STRING"
-msgstr "字串"
+msgstr "STRING"
 
-#: popthelp.c:220
 msgid "FLOAT"
-msgstr "浮点"
+msgstr "FLOAT"
 
-#: popthelp.c:221
 msgid "DOUBLE"
-msgstr "双精度"
+msgstr "DOUBLE"
 
-#: popthelp.c:224
 msgid "ARG"
-msgstr "参数"
+msgstr "ARG"
 
-#: popthelp.c:665
 msgid "Usage:"
-msgstr "用法："
+msgstr "用法:"
 
-#: popthelp.c:690
 msgid "[OPTION...]"
 msgstr "[选项...]"

@@ -1,154 +1,114 @@
 # Polish translation for popt.
 # This file is distributed under the same license as the popt package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2002-2015.
-#
+# Jakub Bogusz <qboosh@pld-linux.org>, 2002-2008.
+# Piotr Drąg <piotrdrag@gmail.com>, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.16\n"
-"Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
-"POT-Creation-Date: 2017-03-19 12:46-0400\n"
-"PO-Revision-Date: 2015-04-05 16:24+0200\n"
-"Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
-"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"Project-Id-Version: popt 1.14\n"
+"Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
+"POT-Creation-Date: 2020-06-23 13:29+0300\n"
+"PO-Revision-Date: 2020-08-22 11:25+0000\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
+"Language-Team: Polish <https://translate.fedoraproject.org/projects/popt/"
+"master/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.2.1\n"
 
-#: popt.c:54
 msgid "unknown errno"
 msgstr "nieznane errno"
 
-#: popt.c:1453
-#, fuzzy, c-format
-msgid "option type (%u) not implemented in popt"
-msgstr "typ opcji (%u) nie zaimplementowany w popt\n"
+#, c-format
+msgid "option type (%u) not implemented in popt\n"
+msgstr "typ opcji (%u) nie jest zaimplementowany w popt\n"
 
-#: popt.c:1902
 msgid "missing argument"
 msgstr "brak parametru"
 
-#: popt.c:1904
 msgid "unknown option"
 msgstr "nieznana opcja"
 
-#: popt.c:1906
 msgid "mutually exclusive logical operations requested"
-msgstr "żądanie wykluczających się operacji"
+msgstr "zażądano wzajemnie wykluczających się działań logicznych"
 
-#: popt.c:1908
 msgid "opt->arg should not be NULL"
 msgstr "opt->arg nie może być NULL"
 
-#: popt.c:1910
 msgid "aliases nested too deeply"
-msgstr "zbyt duże zagłębienie aliasów"
+msgstr "za duże zagłębienie aliasów"
 
-#: popt.c:1912
 msgid "error in parameter quoting"
-msgstr "błąd w cytowaniu parametru"
+msgstr "błąd w cytowaniu parametru"
 
-#: popt.c:1914
 msgid "invalid numeric value"
-msgstr "błędna wartość liczbowa"
+msgstr "nieprawidłowa wartość liczbowa"
 
-#: popt.c:1916
 msgid "number too large or too small"
-msgstr "liczba zbyt duża lub zbyt mała"
+msgstr "liczba jest za duża lub za mała"
 
-#: popt.c:1918
 msgid "memory allocation failed"
-msgstr "błąd alokacji pamięci"
+msgstr "przydzielenie pamięci się nie powiodło"
 
-#: popt.c:1920
 msgid "config file failed sanity test"
-msgstr "plik konfiguracyjny nie przeszedł testu poprawności"
+msgstr "test poprawności pliku konfiguracji się nie powiódł"
 
-#: popt.c:1922
-msgid "option does not take an argument"
-msgstr ""
-
-#: popt.c:1924
-msgid "stack underflow"
-msgstr ""
-
-#: popt.c:1926
-msgid "stack overflow"
-msgstr ""
-
-#: popt.c:1930
 msgid "unknown error"
 msgstr "nieznany błąd"
 
-#: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
-msgstr "Pokaż tę pomoc"
+msgstr "Wyświetla ten komunikat pomocy"
 
-#: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
-msgstr "Wyświetl skrócony sposób użycia"
+msgstr "Wyświetla skrócony sposób użycia"
 
-#: popthelp.c:99
 msgid "Display option defaults in message"
-msgstr "Wyświetl domyślne opcje w opisie"
+msgstr "Wyświetla domyślne opcje w komunikacie"
 
-#: popthelp.c:101
 msgid "Terminate options"
 msgstr "Opcje zakończenia"
 
-#: popthelp.c:200
 msgid "Help options:"
 msgstr "Opcje pomocy:"
 
-#: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
-msgstr "Opcje zaimplementowane poprzez popt alias/exec:"
+msgstr "Opcje zaimplementowane przez alias/exec popt:"
 
-#: popthelp.c:209
 msgid "NONE"
 msgstr "BRAK"
 
-#: popthelp.c:211
 msgid "VAL"
 msgstr "WART"
 
-#: popthelp.c:215
 msgid "INT"
 msgstr "INT"
 
-#: popthelp.c:216
 msgid "SHORT"
 msgstr "SHORT"
 
-#: popthelp.c:217
 msgid "LONG"
 msgstr "LONG"
 
-#: popthelp.c:218
 msgid "LONGLONG"
 msgstr "LONGLONG"
 
-#: popthelp.c:219
 msgid "STRING"
-msgstr "ŁAŃCUCH"
+msgstr "CIĄG"
 
-#: popthelp.c:220
 msgid "FLOAT"
 msgstr "FLOAT"
 
-#: popthelp.c:221
 msgid "DOUBLE"
 msgstr "DOUBLE"
 
-#: popthelp.c:224
 msgid "ARG"
 msgstr "PARAM"
 
-#: popthelp.c:665
 msgid "Usage:"
-msgstr "Składnia:"
+msgstr "Użycie:"
 
-#: popthelp.c:690
 msgid "[OPTION...]"
-msgstr "[OPCJA...]"
+msgstr "[OPCJA…]"

@@ -2,155 +2,111 @@
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the popt package.
 # Milan Kerslager <kerslage@linux.cz>, 2001.
-# Petr Pisar <petr.pisar@atlas.cz>, 2008, 2015.
+# Petr Pisar <petr.pisar@atlas.cz>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: popt 1.16\n"
-"Report-Msgid-Bugs-To: <popt-devel@rpm5.org>\n"
-"POT-Creation-Date: 2017-03-19 12:46-0400\n"
-"PO-Revision-Date: 2015-03-29 20:13+0200\n"
+"Project-Id-Version: popt 1.14\n"
+"Report-Msgid-Bugs-To: <rpm-maint@lists.rpm.org>\n"
+"POT-Creation-Date: 2020-06-23 13:29+0300\n"
+"PO-Revision-Date: 2008-12-08 19:55+0100\n"
 "Last-Translator: Petr Pisar <petr.pisar@atlas.cz>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
 
-#: popt.c:54
 msgid "unknown errno"
 msgstr "neznámé číslo chyby"
 
-#: popt.c:1453
-#, fuzzy, c-format
-msgid "option type (%u) not implemented in popt"
+#, c-format
+msgid "option type (%u) not implemented in popt\n"
 msgstr "typ volby (%u) není v popt implementován\n"
 
-#: popt.c:1902
 msgid "missing argument"
 msgstr "chybí argument"
 
-#: popt.c:1904
 msgid "unknown option"
 msgstr "neznámá volba"
 
-#: popt.c:1906
 msgid "mutually exclusive logical operations requested"
 msgstr "požadovány vzájemně výlučné logické operace"
 
-#: popt.c:1908
 msgid "opt->arg should not be NULL"
 msgstr "opt->arg nesmí být NULL"
 
-#: popt.c:1910
 msgid "aliases nested too deeply"
 msgstr "aliasy vnořené příliš hluboko"
 
-#: popt.c:1912
 msgid "error in parameter quoting"
-msgstr "chyba v uzávorkování parametrů"
+msgstr "chyba v quotování parametrů"
 
-#: popt.c:1914
 msgid "invalid numeric value"
 msgstr "chybná numerická hodnota"
 
-#: popt.c:1916
 msgid "number too large or too small"
 msgstr "číslo je příliš velké nebo příliš malé"
 
-#: popt.c:1918
 msgid "memory allocation failed"
 msgstr "selhala alokace paměti"
 
-#: popt.c:1920
 msgid "config file failed sanity test"
-msgstr "konfigurační soubor neprošel testem příčetnosti"
-
-#: popt.c:1922
-msgid "option does not take an argument"
 msgstr ""
 
-#: popt.c:1924
-msgid "stack underflow"
-msgstr ""
-
-#: popt.c:1926
-msgid "stack overflow"
-msgstr ""
-
-#: popt.c:1930
 msgid "unknown error"
 msgstr "neznámá chyba"
 
-#: popthelp.c:84 popthelp.c:95
 msgid "Show this help message"
 msgstr "Vypíše tuto nápovědu"
 
-#: popthelp.c:85 popthelp.c:96
 msgid "Display brief usage message"
 msgstr "Vypíše krátký návod k použití"
 
-#: popthelp.c:99
 msgid "Display option defaults in message"
 msgstr "Zobrazit implicitní volby ve zprávě"
 
-#: popthelp.c:101
 msgid "Terminate options"
 msgstr "Ukončí volby"
 
-#: popthelp.c:200
 msgid "Help options:"
 msgstr "Volby nápovědy:"
 
-#: popthelp.c:201
 msgid "Options implemented via popt alias/exec:"
 msgstr "Volby implementované přes alias/exec poptu:"
 
-#: popthelp.c:209
 msgid "NONE"
 msgstr "NONE"
 
-#: popthelp.c:211
 msgid "VAL"
 msgstr "VAL"
 
-#: popthelp.c:215
 msgid "INT"
 msgstr "INT"
 
-#: popthelp.c:216
 msgid "SHORT"
-msgstr "SHORT"
+msgstr ""
 
-#: popthelp.c:217
 msgid "LONG"
 msgstr "LONG"
 
-#: popthelp.c:218
 msgid "LONGLONG"
 msgstr "LONGLONG"
 
-#: popthelp.c:219
 msgid "STRING"
 msgstr "STRING"
 
-#: popthelp.c:220
 msgid "FLOAT"
 msgstr "FLOAT"
 
-#: popthelp.c:221
 msgid "DOUBLE"
 msgstr "DOUBLE"
 
-#: popthelp.c:224
 msgid "ARG"
 msgstr "ARG"
 
-#: popthelp.c:665
 msgid "Usage:"
 msgstr "Použití:"
 
-#: popthelp.c:690
 msgid "[OPTION...]"
 msgstr "[VOLBY…]"
