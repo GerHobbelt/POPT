@@ -131,11 +131,7 @@ int poptReadFile(const char * fn, char ** bp, size_t * nbp, int flags)
     char * s, * t, * se;
     int rc = POPT_ERROR_ERRNO;	/* assume failure */
 
-#ifndef __OS2__
     fdno = open(fn, O_RDONLY);
-#else
-    fdno = open(fn, O_RDONLY|O_TEXT);
-#endif
     if (fdno < 0)
 	goto exit;
 
