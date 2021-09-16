@@ -131,14 +131,22 @@ int poptReadFile(const char * fn, char ** bp, size_t * nbp, int flags)
     char * s, * t, * se;
     int rc = POPT_ERROR_ERRNO;	/* assume failure */
 
+#ifndef __OS2__
     fdno = open(fn, O_RDONLY);
+#else
+    fdno = open(fn, O_RDONLY|O_TEXT);
+#endif
     if (fdno < 0)
 	goto exit;
 
     if ((nb = lseek(fdno, 0, SEEK_END)) == (off_t)-1
      || lseek(fdno, 0, SEEK_SET) == (off_t)-1
      || (b = calloc(sizeof(*b), (size_t)nb + 1)) == NULL
+#ifdef __OS2__ // CRLF conversion!
+     || read(fdno, (char *)b, (size_t)nb) == -1)
+#else
      || read(fdno, (char *)b, (size_t)nb) != (ssize_t)nb)
+#endif
     {
 	int oerrno = errno;
 	(void) close(fdno);
