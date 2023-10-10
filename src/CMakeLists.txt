@@ -4,13 +4,8 @@
 add_compile_definitions(POPT_SYSCONFDIR="${CMAKE_INSTALL_FULL_SYSCONFDIR}")
 add_compile_definitions(PACKAGE="${PROJECT_NAME}")
 
-# Setup library target
-
-if (NOT BUILD_STATIC_LIBS AND NOT BUILD_SHARED_LIBS)
-	message(FATAL_ERROR "Can't disable both shared and static libraries")
-endif()
-
-set(SOURCES
+# Source library target
+set(POTP_SOURCE
 	popt.c
 	poptconfig.c
 	popthelp.c
@@ -18,39 +13,34 @@ set(SOURCES
 	poptparse.c
 	poptint.h
 	system.h
+	system.c
 )
 
+# Setup library target
 if (BUILD_SHARED_LIBS)
-	add_library(poptShared SHARED ${SOURCES})
-	set(shared_lib poptShared)
-	target_include_directories(poptShared PUBLIC
-		$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
-	)
-	if (Iconv_FOUND)
-		target_link_libraries(poptShared PRIVATE Iconv::Iconv)
-	endif()
-	set_target_properties(poptShared PROPERTIES
-		OUTPUT_NAME popt
-		VERSION ${PROJECT_VERSION}
-		SOVERSION ${POPT_SOVERSION}
-		PUBLIC_HEADER popt.h
-		LINK_FLAGS "-Wl,--no-undefined -Wl,--version-script,\"${PROJECT_SOURCE_DIR}/src/libpopt.vers\""
-	)
+	add_library(popt SHARED ${POTP_SOURCE})
+else ()
+	add_library(popt STATIC ${POTP_SOURCE})
+endif ()
+
+target_include_directories(popt PUBLIC
+	$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
+	$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+)
+
+if (Iconv_FOUND)
+	target_link_libraries(popt PRIVATE Iconv::Iconv)
 endif()
 
-if (BUILD_STATIC_LIBS)
-	add_library(poptStatic STATIC ${SOURCES})
-	set(static_lib poptStatic)
-	target_include_directories(poptStatic PUBLIC
-		$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
-	)
-	set_target_properties(poptStatic PROPERTIES
-		OUTPUT_NAME popt
-		PUBLIC_HEADER popt.h
-	)
-endif()
+set_target_properties(popt PROPERTIES
+	VERSION ${PROJECT_VERSION}
+	SOVERSION ${POPT_SOVERSION}
+	C_STANDARD 99
+	C_STANDARD_REQUIRED ON
+	C_EXTENSIONS ON
+	PUBLIC_HEADER popt.h
+	LINK_FLAGS "-Wl,--no-undefined -Wl,--version-script,\"${PROJECT_SOURCE_DIR}/src/libpopt.vers\""
+)
 
 # Install the library
 configure_file(${PROJECT_SOURCE_DIR}/cmake/popt.pc.in ${CMAKE_BINARY_DIR}/popt.pc @ONLY)
@@ -59,7 +49,7 @@ install(FILES ${CMAKE_BINARY_DIR}/popt.pc
 	 DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig
 )
 
-install(TARGETS ${shared_lib} ${static_lib}
+install(TARGETS popt
 	EXPORT poptTargets
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 	PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
