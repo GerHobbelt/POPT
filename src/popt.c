@@ -506,6 +506,7 @@ static int execCommand(poptContext con)
  * XXX 	sez' Timur Bakeyev <mc@bat.ru>
  * XXX	from Norbert Warmuth <nwarmuth@privat.circular.de>
  */
+#if defined (HAVE_GETUID)
 #if defined(HAVE_SETUID)
     rc = setgid(getgid());
     if (rc) goto exit;
@@ -522,6 +523,7 @@ static int execCommand(poptContext con)
 	errno = ENOTSUP;
 	goto exit;
     }
+#endif
 #endif
 #endif
 
