@@ -9,7 +9,9 @@
 #include "system.h"
 #include "poptint.h"
 #include <sys/stat.h>
+#ifndef _MSC_VER
 #include <unistd.h>
+#endif
 #include <fcntl.h>
 #include <errno.h>
 
@@ -116,10 +118,12 @@ int poptSaneFile(const char * fn)
 	return 0;
     if (stat(fn, &sb) == -1)
 	return 0;
+#ifndef WINDOWS_BUILD
     if (!S_ISREG(sb.st_mode))
 	return 0;
     if (sb.st_mode & (S_IXUSR|S_IXGRP|S_IXOTH))
 	return 0;
+#endif
     return 1;
 }
 

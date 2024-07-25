@@ -10,7 +10,7 @@
 
 #include "system.h"
 
-#ifndef __WIN32__
+#ifndef WINDOWS_BUILD
 #define        POPT_USE_TIOCGWINSZ
 #endif
 #ifdef POPT_USE_TIOCGWINSZ

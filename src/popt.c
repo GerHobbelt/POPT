@@ -12,13 +12,15 @@
 
 #include <float.h>
 #include <math.h>
+#ifndef _MSC_VER
 #include <unistd.h>
+#endif
 #include <limits.h>
 #include <errno.h>
 
 #include "poptint.h"
 
-#ifdef HAVE_STDALIGN_H
+#if defined(HAVE_STDALIGN_H) && !defined(_MSC_VER)
 #include <stdalign.h>
 #define ALIGNOF(x) alignof(x)
 #elif defined __GNUC__
