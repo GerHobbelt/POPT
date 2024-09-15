@@ -1530,7 +1530,6 @@ poptContext poptFreeContext(poptContext con)
     int i;
 
     if (con == NULL) return con;
-    poptResetContext(con);
 
     con->aliases = poptFreeItems(con->aliases, con->numAliases);
     con->numAliases = 0;
@@ -1548,6 +1547,7 @@ poptContext poptFreeContext(poptContext con)
     con->otherHelp = _free(con->otherHelp);
     con->execPath = _free(con->execPath);
     con->arg_strip = PBM_FREE(con->arg_strip);
+    poptResetContext(con);
     
     con = _free(con);
     return con;
