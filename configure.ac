@@ -8,7 +8,7 @@ AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([1.10 foreign -Wall])
 
-AC_PROG_CC_STDC
+m4_version_prereq([2.70], [], [AC_PROG_CC_STDC])
 AC_PROG_CC
 AC_USE_SYSTEM_EXTENSIONS
 AM_PROG_AR
@@ -53,7 +53,7 @@ AC_SEARCH_LIBS([setreuid], [ucb])
 AC_CHECK_FUNCS([getuid geteuid iconv mtrace secure_getenv __secure_getenv setreuid setuid stpcpy strerror vasprintf srandom glob_pattern_p mbsrtowcs])
 
 AM_GNU_GETTEXT_VERSION([0.19.8])
-AM_GNU_GETTEXT_REQUIRE_VERSION(0.19.8)
+AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 AM_ICONV_LINK
 
