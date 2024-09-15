@@ -17,13 +17,13 @@
 # The PROJECT_NAME tag is a single word (or a sequence of words surrounded 
 # by quotes) that should identify the project.
 
-PROJECT_NAME           = @PACKAGE@
+PROJECT_NAME           = @CMAKE_PROJECT_NAME@
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. 
 # This could be handy for archiving the generated documentation or 
 # if some version control system is used.
 
-PROJECT_NUMBER         = @VERSION@
+PROJECT_NUMBER         = @PROJECT_VERSION@
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) 
 # base path where the generated documentation will be put. 
@@ -115,7 +115,8 @@ FULL_PATH_NAMES        = YES
 # If left blank the directory from which doxygen is run is used as the 
 # path to strip.
 
-STRIP_FROM_PATH        = @top_srcdir@/
+STRIP_FROM_PATH        = @PROJECT_SOURCE_DIR@ \
+                         @PROJECT_BINARY_DIR@
 
 # The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of 
 # the path mentioned in the documentation of a class, which tells 
@@ -124,7 +125,7 @@ STRIP_FROM_PATH        = @top_srcdir@/
 # definition is used. Otherwise one should specify the include paths that 
 # are normally passed to the compiler using the -I flag.
  
-STRIP_FROM_INC_PATH    = @top_srcdir@/
+STRIP_FROM_INC_PATH    = 
 
 # If the SHORT_NAMES tag is set to YES, doxygen will generate much shorter 
 # (but less readable) file names. This can be useful is your file systems 
@@ -459,15 +460,7 @@ WARN_LOGFILE           =
 # directories like "/usr/src/myproject". Separate the files or directories 
 # with spaces.
 
-INPUT                  = \
-                        ./src/popt.c \
-                        ./src/popt.h \
-                        ./src/poptconfig.c \
-                        ./src/popthelp.c \
-                        ./src/poptint.c \
-                        ./src/poptint.h \
-                        ./src/poptparse.c \
-                        ./src/system.h
+INPUT                  = @PROJECT_SOURCE_DIR@/src
 
 # If the value of the INPUT tag contains directories, you can use the 
 # FILE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp 
