@@ -19,6 +19,11 @@ option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 # Set soversion
 set(POPT_SOVERSION 0)
 
+# Configurable stuff
+option(ENABLE_WERROR "Stop build on warnings" OFF)
+option(ENABLE_ASAN "Enable address-sanitizer" OFF)
+option(ENABLE_UBSAN "Enable undefined behavior-sanitizer" OFF)
+
 # Set up GNU conventions and standard FHS paths
 include(GNUInstallDirs)
 
@@ -110,6 +115,25 @@ find_package(Iconv)
 if (Iconv_FOUND)
     add_compile_definitions(HAVE_ICONV)
 endif ()
+
+add_compile_options(-Wall)
+if (ENABLE_WERROR)
+	add_compile_options(-Werror)
+endif()
+
+# Sanitizers
+if (ENABLE_ASAN)
+	add_compile_options(-fsanitize=address)
+	add_link_options(-fsanitize=address)
+endif()
+if (ENABLE_UBSAN)
+        add_compile_options(-fsanitize=undefined)
+        add_link_options(-fsanitize=undefined)
+endif()
+if (ENABLE_ASAN OR ENABLE_UBSAN)
+        add_compile_options(-fno-omit-frame-pointer)
+endif()
+
 
 add_subdirectory(src)
 

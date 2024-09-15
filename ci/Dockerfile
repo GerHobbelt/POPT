@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:36
+FROM registry.fedoraproject.org/fedora:39
 MAINTAINER rpm-maint@lists.rpm.org
 
 WORKDIR /srv/popt
@@ -16,5 +16,5 @@ RUN dnf -y install \
 
 COPY . .
 
-RUN cmake -S . -B ./build -DCMAKE_BUILD_TYPE=RelWithDebInfoStrict
+RUN cmake -S . -B ./build -DENABLE_WERROR=ON
 CMD cd build && ctest --output-on-failure --force-new-ctest-process
