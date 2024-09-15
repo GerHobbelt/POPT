@@ -187,7 +187,25 @@ poptContext poptGetContext(const char * name, int argc, const char ** argv,
 	con->flags |= POPT_CONTEXT_POSIXMEHARDER;
 
     if (name)
-	con->appName = xstrdup(name);
+    {
+        // strip full path (OS/2, Win32, ...)
+        char *n = strrchr( name, '/');
+        if (n != NULL)
+            n++;
+        else if ((n = strrchr( name, '\\')) != NULL)
+            n++;
+        else
+            n = (char*) name;
+
+        con->appName = xstrdup(n);
+
+        // strip exe extension (OS/2, Win32, ...)
+        n = strstr( con->appName, ".exe");
+        if (n == NULL)
+            n = strstr( con->appName, ".EXE");
+        if (n != NULL)
+            n[0] = 0;
+    }
 
     invokeCallbacksPRE(con, con->options);
 
