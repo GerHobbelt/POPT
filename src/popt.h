@@ -8,6 +8,14 @@
 #ifndef H_POPT
 #define H_POPT
 
+#if defined (_MSC_VER) || defined (__WIN32__)
+#define WINDOWS_BUILD
+#endif
+
+#if defined (_MSC_VER)
+#include "msvc.h"
+#endif
+
 #include <stdio.h>			/* for FILE * */
 #include "poptexport.h"     /* for macro dllexport e dllimport */
 

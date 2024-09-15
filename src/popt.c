@@ -20,7 +20,7 @@
 
 #include "poptint.h"
 
-#ifdef HAVE_STDALIGN_H
+#if defined(HAVE_STDALIGN_H) && !defined(_MSC_VER)
 #include <stdalign.h>
 #define ALIGNOF(x) alignof(x)
 #elif defined __GNUC__
@@ -508,6 +508,7 @@ static int execCommand(poptContext con)
  * XXX 	sez' Timur Bakeyev <mc@bat.ru>
  * XXX	from Norbert Warmuth <nwarmuth@privat.circular.de>
  */
+#if defined (HAVE_GETUID)
 #if defined(HAVE_SETUID)
     rc = setgid(getgid());
     if (rc) goto exit;
@@ -524,6 +525,7 @@ static int execCommand(poptContext con)
 	errno = ENOTSUP;
 	goto exit;
     }
+#endif
 #endif
 #endif
 
