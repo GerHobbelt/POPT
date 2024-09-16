@@ -11,9 +11,9 @@
 #include <sys/stat.h>
 
 #ifndef _MSC_VER
-
 #include <unistd.h>
-
+#else
+#include <io.h>
 #endif
 
 #include <fcntl.h>
@@ -21,7 +21,6 @@
 
 #if defined(HAVE_FNMATCH_H)
 #include <fnmatch.h>
-
 #endif
 
 #if defined(HAVE_GLOB_H)

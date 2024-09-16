@@ -37,13 +37,13 @@ unsigned int _poptArgMask = POPT_ARG_MASK;
 unsigned int _poptGroupMask = POPT_GROUP_MASK;
 
 #if !defined(HAVE_STRERROR)
-static char * strerror(int errno)
+static char * strerror(int errorno)
 {
-    extern int sys_nerr;
+	  extern int sys_nerr;
     extern char * sys_errlist[];
 
-    if ((0 <= errno) && (errno < sys_nerr))
-	return sys_errlist[errno];
+    if ((0 <= errorno) && (errorno < sys_nerr))
+	return sys_errlist[errorno];
     else
 	return POPT_("unknown errno");
 }

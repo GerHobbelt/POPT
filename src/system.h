@@ -6,6 +6,11 @@
 #include "config.h"
 #endif
 
+#if defined(BUILD_MONOLITHIC)
+#define PACKAGE		"popt"
+#define POPT_SYSCONFDIR  "/var"
+#endif
+
 #include <ctype.h>
 
 /* XXX isspace(3) has i18n encoding signedness issues on Solaris. */

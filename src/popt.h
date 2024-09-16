@@ -12,12 +12,12 @@
 #define WINDOWS_BUILD
 #endif
 
-#if defined (_MSC_VER)
-#include "msvc.h"
-#endif
-
 #include <stdio.h>			/* for FILE * */
+#if defined(BUILD_MONOLITHIC)
+#define POPT_LIB_EXPORT
+#else
 #include "poptexport.h"     /* for macro dllexport e dllimport */
+#endif
 
 /**
  * \name Arg type identifiers
