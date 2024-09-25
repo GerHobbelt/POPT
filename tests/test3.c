@@ -2,8 +2,8 @@
 
 #include "system.h"
 
-int main (int argc, char **argv) {
-    char *out;
+int main (int argc, const char **argv) {
+    const char *out;
     int newargc, j, f, ret;
     const char **newargv;
     FILE *fp;
@@ -42,7 +42,7 @@ int main (int argc, char **argv) {
 
 	printf ("\n");
 	free(newargv);
-	free(out);
+	free((void *)out);
 	fclose (fp);
     }
     return 0;
