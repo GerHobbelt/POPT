@@ -947,7 +947,7 @@ static void driver4(void)
 }
 
 
-int main(int argc, char ** argv)
+int main(void)
 {
     driver1();	/* test that the key is hashed: used for timings */
     driver2();	/* test that whole key is hashed thoroughly */

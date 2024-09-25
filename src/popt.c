@@ -14,6 +14,9 @@
 #include <math.h>
 #ifndef _MSC_VER
 #include <unistd.h>
+#else
+#include <io.h>
+#include <process.h>
 #endif
 #include <limits.h>
 #include <errno.h>
@@ -36,7 +39,7 @@ int _popt_debug = 0;
 unsigned int _poptArgMask = POPT_ARG_MASK;
 unsigned int _poptGroupMask = POPT_GROUP_MASK;
 
-#if !defined(HAVE_STRERROR)
+#if !defined(HAVE_STRERROR) && !defined(_MSC_VER)
 static char * strerror(int errorno)
 {
 	  extern int sys_nerr;
